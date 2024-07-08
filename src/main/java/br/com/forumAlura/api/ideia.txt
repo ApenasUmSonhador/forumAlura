@@ -1,0 +1,14 @@
+COURSE:
+PK = id, name, category
+
+TOPIC:
+PK = id, title, message, creationDate, status, FK = author - USER.id, FK = Course - COURSE.id
+
+ANSWER:
+PK = id, message, creationDate, solution, FK = author - USER.id
+
+USER:
+PK = id, name, email, password
+
+PROFILE:
+PK = id, name, FK = user - USER.id
